@@ -1,0 +1,51 @@
+<form   class="row"   (ngSubmit)="updateProduct(updateProductForm)" #updateProductForm="ngForm">
+    <h1 class="text-center">Update Product Details</h1>
+    <div class="col-md-6 mt-4">
+        <label for="">Product Id:</label> 
+        <input type="text" name="id" [(ngModel)]="ProductDetails.id"  placeholder="" class="form-control mt-2"  required>
+    </div>
+    <div class="col-md-6 mt-4">
+        <label for="">productName:</label>
+        <input type="text" name="productName" [(ngModel)]="ProductDetails.productName"  placeholder="" class="form-control mt-2" required>
+    </div>
+    <div class="col-md-6 mt-3">
+        <label for="">Category Id:</label>
+        <input type="text" name="categoryId" [(ngModel)]="ProductDetails.categoryId" placeholder="" class="form-control mt-2" required>
+    </div>
+    <div class="col-md-6 mt-3">
+        <label for="">Product Description:</label>
+        <input type="text" name="description" [(ngModel)]="ProductDetails.description"  placeholder="" class="form-control mt-2" required>
+    </div>
+    <div class="col-md-6 mt-3">
+        <label for="">Price:</label>
+        <input type="text" name="price" [(ngModel)]="ProductDetails.price"  placeholder="" class="form-control mt-2" required>
+    </div>
+    <div class="col-md-6 mt-3">
+        <label for="">Product availability:</label>
+        <input type="text" name="is_available" [(ngModel)]="ProductDetails.is_available"  placeholder="Yes/No" class="form-control mt-2" required>
+    </div>
+    <div class="col-md-6 mt-3">
+        <label for="">Product Imgage:</label>
+        <input type="text" name="productImg" [(ngModel)]="ProductDetails.productImg"  placeholder="" class="form-control mt-2" required>
+    </div>
+    <div class="col-md-6 mt-3">
+        <label for="">Product rating:</label> 
+        <input type="text" name="rating" [(ngModel)]="ProductDetails.rating"  placeholder="" class="form-control mt-2" required>
+    </div>
+    <div class="col-md-6 mt-3">
+        <label for="">Product review:</label>
+        <input type="text" name="review" [(ngModel)]="ProductDetails.review"  placeholder="" class="form-control mt-2"  required>
+    </div>
+    <div class="col-md-6 mt-3">
+        <label for="">Vendor Name:</label>
+        <input type="text" name="vendor_name" [(ngModel)]="ProductDetails.vendor_name"  placeholder="" class="form-control mt-2" required>
+    </div>
+    <div class="col-md-6 mt-3">
+        <label for="">Product warranty:</label>
+        <input type="text" name="warranty" [(ngModel)]="ProductDetails.warranty" placeholder="" class="form-control mt-2" required>
+    </div>
+    <div class=" mt-4">
+        <button class="btn btn-secondary">Submit Form</button>
+    </div>
+</form>
+

@@ -1,0 +1,162 @@
+<!-- category bar -->
+<div class="card-top container-fluid">
+    <div class="container d-flex pt-4">
+        <a (click)="filter('')">
+            <div class="item">
+                <div style="border: none;" class="card">
+                    <img style="height: 90px;width: 110px;" class="card-img-top"
+                        src="https://www.linkpicture.com/q/all_5.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h6 class="card-title">All Products</h6>
+                    </div>
+                </div>
+            </div>
+        </a>
+
+        <a (click)="filter('1')">
+            <div class="item">
+                <div style="border: none;" class="card">
+                    <img style="margin-top:10px ;" class="card-img-top"
+                        src="https://www.linkpicture.com/q/mobile_logo.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h6 class="card-title">Mobiles</h6>
+                    </div>
+
+                </div>
+            </div>
+        </a>
+
+        <a (click)="filter('2')">
+            <div class="item">
+                <div style="border: none" class="card">
+                    <img style="width:100px;margin-left: 18px;margin-top: 15px;" class="card-img-top"
+                        src="https://www.linkpicture.com/q/Laptops-LOGO_3.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h6 class="card-title">Laptops</h6>
+                    </div>
+                </div>
+            </div>
+        </a>
+
+        <a (click)="filter('3')">
+            <div class="item">
+                <div style="border: none" class="card">
+                    <img style="width:80px;margin-left: 18px;margin-top: 10px;" class="card-img-top"
+                        src="https://www.linkpicture.com/q/watch_logo_1.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h6 class="card-title">Watches</h6>
+                    </div>
+                </div>
+            </div>
+        </a>
+
+        <a (click)="filter('4')">
+            <div class="item">
+                <div style="border: none" class="card">
+                    <img style="width:120px ;height:90px;margin-left: 8px;;" class="card-img-top"
+                        src="https://www.linkpicture.com/q/tab_logo_1.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h6 class="card-title">Tablets</h6>
+                    </div>
+                </div>
+            </div>
+        </a>
+
+        <a (click)="filter('5')">
+            <div class="item">
+                <div style="border: none" class="card">
+                    <img style="width:80px ;margin-top:10px;margin-left: 10px;" class="card-img-top"
+                        src="https://www.linkpicture.com/q/soundbars_logo.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h6 class="card-title">Soundbars</h6>
+                    </div>
+                </div>
+            </div>
+        </a>
+
+        <a (click)="filter('6')">
+            <div class="item">
+                <div style="border: none" class="card">
+                    <img style="width: 90px;height:70px;margin-top:20px ;margin-left:5px;" class="card-img-top"
+                        src="https://www.linkpicture.com/q/tv_logo.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h6 class="card-title">Television</h6>
+                    </div>
+                </div>
+            </div>
+        </a>
+
+        <a (click)="filter('7')">
+            <div class="item">
+                <div style="border: none" class="card">
+                    <img style="width:100px;margin-top:10px" class="card-img-top"
+                        src="https://www.linkpicture.com/q/camera_logo_1.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h6 class="card-title">Cameras</h6>
+                    </div>
+                </div>
+            </div>
+        </a>
+
+        <a (click)="filter('8')">
+            <div class="item">
+                <div style="border: none" class="card">
+                    <img style="width:70px;margin-top:20px;margin-left: 10px;" class="card-img-top"
+                        src="https://www.linkpicture.com/q/headset_logo.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h6 class="card-title">Headset</h6>
+                    </div>
+                </div>
+            </div>
+        </a>
+
+        <a (click)="filter('9')">
+            <div class="item">
+                <div style="border: none" class="card">
+                    <img style="width:70px;margin-top:20px;margin-left: 10px;" class="card-img-top"
+                        src="https://www.linkpicture.com/q/powerbank_logo.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h6 class="card-title">Power Banks</h6>
+                    </div>
+                </div>
+            </div>
+        </a>
+
+    </div>
+</div>
+
+
+
+
+<!-- Section-->
+<section class="py-5">
+    <div class="container px-4 px-lg-5 mt-5">
+        <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+            <div *ngFor="let products of filterCategory | filter:searchKey:'productName'" class="col mb-5">
+                <div class="card h-100">
+                    <!-- Product image-->
+                    <img class="card-img-top" src="{{products.productImg}}" alt="..." />
+                    <!-- Product details-->
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">{{products.productName}}</h5>
+                            <!-- Product price-->
+                            {{products.price}} RS
+                        </div>
+                    </div>
+                    <!-- Product actions-->
+                    <div class="card-footer  border-top-0 bg-transparent">
+                        <div >
+                            <a class="btn btn-outline-dark mt-auto" href="products/view-products/{{products.id}}">View
+                                options</a>
+                        </div><br>
+                        <!-- <div >
+                            <a class="btn btn-outline-dark mt-auto" href="products/view-products/{{products.id}}">Add to Cart</a>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

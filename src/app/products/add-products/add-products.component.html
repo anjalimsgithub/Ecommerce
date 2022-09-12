@@ -1,0 +1,50 @@
+<form [formGroup]="addProductForm"  class="row"  (ngSubmit)="addProduct()" >
+    <h1 class="text-center">Add New Product</h1>
+    <div class="col-md-6 mt-4">
+        <label for="">Product Id:</label> 
+        <input type="text" formControlName="id" placeholder="" class="form-control mt-2"  required>
+    </div>
+    <div class="col-md-6 mt-4">
+        <label for="">productName:</label>
+        <input type="text" formControlName="productName"  placeholder="" class="form-control mt-2" required>
+    </div>
+    <div class="col-md-6 mt-3">
+        <label for="">Category Id:</label>
+        <input type="text" formControlName="categoryId"  placeholder="" class="form-control mt-2" required>
+    </div>
+    <div class="col-md-6 mt-3">
+        <label for="">Product Description:</label>
+        <input type="text" formControlName="description"  placeholder="" class="form-control mt-2" required>
+    </div>
+    <div class="col-md-6 mt-3">
+        <label for="">Price:</label>
+        <input type="text" formControlName="price"  placeholder="" class="form-control mt-2" required>
+    </div>
+    <div class="col-md-6 mt-3">
+        <label for="">Product availability:</label>
+        <input type="text" formControlName="is_available"  placeholder="Yes/No" class="form-control mt-2" required>
+    </div>
+    <div class="col-md-6 mt-3">
+        <label for="">Product Imgage:</label>
+        <input type="text" formControlName="productImg"  placeholder="" class="form-control mt-2" required>
+    </div>
+    <div class="col-md-6 mt-3">
+        <label for="">Product rating:</label> 
+        <input type="text" formControlName="rating"  placeholder="" class="form-control mt-2" required>
+    </div>
+    <div class="col-md-6 mt-3">
+        <label for="">Product review:</label>
+        <input type="text" formControlName="review"  placeholder="" class="form-control mt-2"  required>
+    </div>
+    <div class="col-md-6 mt-3">
+        <label for="">Vendor Name:</label>
+        <input type="text" formControlName="vendor_name"  placeholder="" class="form-control mt-2" required>
+    </div>
+    <div class="col-md-6 mt-3">
+        <label for="">Product warranty:</label>
+        <input type="text" formControlName="warranty"  placeholder="" class="form-control mt-2" required>
+    </div>
+    <div class=" mt-4">
+        <button class="btn btn-secondary">Submit Form</button>
+    </div>
+</form>
